@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/appbg" >
+
+    <!-- ==================== Header Bar========================= -->
+
+    <RelativeLayout
+        android:id="@+id/regtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#8f8f8f" >
+        
+         <ImageView 
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/arrownew"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_txt22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ch_txt1"
+            android:layout_centerHorizontal="true"
+            android:padding="30dp"
+            android:text="ADD TASK"
+            android:textColor="#fdf8f8"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/fill_details_sv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/regtitle"
+        android:paddingBottom="200dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <!-- ============= Subject Field==================== -->
+
+            <LinearLayout
+                android:id="@+id/subject_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/subject_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:textSize="30sp"
+                        android:text="Subject"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <EditText
+                        android:id="@+id/subjecttext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="#ededea"
+                        android:lines="1"
+                        android:textSize="30sp"
+                        android:nextFocusDown="@+id/description"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ============= Description Field==================== -->
+
+            <LinearLayout
+                android:id="@+id/description_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/des_r"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/description_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:text="Description"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/description_text"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="#ededea"
+                        android:gravity="top"
+                        android:imeOptions="actionNext"
+                        android:lines="9"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="2dp"
+                        android:textSize="30sp"
+                        android:scrollbarSize="105dp"
+                        android:scrollbars="vertical"
+                        android:singleLine="false"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- =========================== Task Group=========================== -->
+
+            <LinearLayout
+                android:id="@+id/task_group_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/task_group_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:textSize="30sp"
+                        android:text="Task Group"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/task_group_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textSize="30sp"
+                        android:gravity="center_horizontal"
+                        android:imeOptions="actionNext"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- =========================== Task Type Filed=========================== -->
+
+            <LinearLayout
+                android:id="@+id/task_type_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/task_type_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:text="Task Type"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/task_type_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center_horizontal"
+                        android:imeOptions="actionNext"
+                        android:textSize="30sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- =========================== Sub Task Type Filed=========================== -->
+
+            <LinearLayout
+                android:id="@+id/sub_task_type_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/sub_task_type_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:text="Sub Task Type"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/sub_task_type_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center_horizontal"
+                        android:imeOptions="actionNext"
+                        android:textSize="30sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ====================== Due Date Field======================= -->
+
+            <LinearLayout
+                android:id="@+id/due_date_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/due_date_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:text="Due Date"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <EditText
+                        android:id="@+id/duedatetext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="#ededea"
+                        android:drawableRight="@drawable/due_date_press"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:textSize="30sp"
+                        android:lines="1"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ====================== Priority Field======================= -->
+
+            <LinearLayout
+                android:id="@+id/priority_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/priority_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:text="Priority"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/prioritytext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="30sp"
+                        android:imeOptions="actionNext"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ====================== Task Owner ======================= -->
+
+            <LinearLayout
+                android:id="@+id/task_owner_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/task_owner_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:imeOptions="actionNext"
+                        android:text="Task Owner"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/owner_task"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_horizontal"
+                        android:imeOptions="actionNext"
+                        android:textSize="30sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ====================== Task Owner Array ======================= -->
+
+            <LinearLayout
+                android:id="@+id/task_owner_cc_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/task_owner_cc_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:imeOptions="actionNext"
+                        android:text="Task Owner CC"
+                        android:textSize="30sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <EditText
+                        android:id="@+id/taskownertext"
+                        style="?android:attr/animateOnClick"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="#ededea"
+                        android:drawableRight="@drawable/task_owner_list_press"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:textSize="30sp"
+                        android:lines="1"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ====================== Attachment Field======================= -->
+
+            <LinearLayout
+                android:id="@+id/attachment_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+
+                    <TextView
+                        android:id="@+id/attachment_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="fill_horizontal"
+                        android:textSize="30sp"
+                        android:text="Attachment"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <EditText
+                        android:id="@+id/attachment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:background="#ededea"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:lines="1"
+                        android:textSize="30sp"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- ==================================== Submit and Cancle Button============ -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputfields"
+                android:gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/submit_cancle_btn_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/reg_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#8f8f8f"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:textSize="30sp"
+                        android:text="Submit"
+                        android:textColor="#ffffff" />
+
+                    <!-- <TextView
+                        android:id="@+id/reg_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#8f8f8f"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:textSize="30sp"
+                        android:text="Cancel"
+                        android:textColor="#ffffff" /> -->
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- =================== For putting a gap below scroll view========== -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" >
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ============================= Footer Text ======================== -->
+	<LinearLayout
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <ImageView
+            android:id="@+id/tab1"
+            android:layout_width="5dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/nmainmenu" />
+
+        <ImageView
+            android:id="@+id/tab2"
+            android:layout_width="5dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/nmembers" />
+
+        <ImageView
+            android:id="@+id/tab3"
+            android:layout_width="5dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/nattendance" />
+
+        <ImageView
+            android:id="@+id/tab4"
+            android:layout_width="5dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/ntasks" />
+    </LinearLayout>
+
+</RelativeLayout>

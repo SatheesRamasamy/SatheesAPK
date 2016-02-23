@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/mem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:padding="10dip"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:textStyle="bold" >
+    </TextView>
+    
+    <ImageView 
+        android:id="@+id/ar_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

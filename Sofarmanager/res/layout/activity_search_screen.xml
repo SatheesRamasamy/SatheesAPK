@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/appbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#8f8f8f" >
+        
+         <ImageView 
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrownew"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/ch_txt22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ch_txt1"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="SEARCH"
+            android:textColor="#fdf8f8"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchlay"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/mtitle"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/transparent" >
+
+        <Spinner
+            android:id="@+id/searchfilter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/transparent"
+            android:gravity="center_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/inputlay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#c8c6c5"
+            android:focusable="false"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/stext"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#c8c6c5"
+                android:hint="Search Text"
+                android:imeOptions="actionDone"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:textSize="14sp"  />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/serach_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.2"
+            android:focusable="false" >
+
+            <TextView
+                android:id="@+id/searchimg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/transparent"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="Search" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/searchlay"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/transparent"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+
+        <ListView
+            android:id="@+id/searchresultlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="80dp"
+            android:background="@drawable/transparent"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <ImageView
+            android:id="@+id/tab1"
+            android:layout_width="5dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/nmainmenu" />
+
+        <ImageView
+            android:id="@+id/tab2"
+            android:layout_width="5dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/nmembers" />
+
+        <ImageView
+            android:id="@+id/tab3"
+            android:layout_width="5dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/nattendance" />
+
+        <ImageView
+            android:id="@+id/tab4"
+            android:layout_width="5dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/ntasks" />
+    </LinearLayout>
+
+</RelativeLayout>
